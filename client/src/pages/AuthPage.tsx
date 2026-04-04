@@ -9,7 +9,7 @@ import { toast } from "sonner";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { getLoginUrl } from "@/const";
 import { Link, useLocation } from "wouter";
-import { Eye, EyeOff, LogIn, UserPlus, Building2 } from "lucide-react";
+import { Eye, EyeOff, LogIn, UserPlus, Building2, ShieldCheck } from "lucide-react";
 
 // Baiterek monument image
 const BAITEREK_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Baiterek_tower.jpg/800px-Baiterek_tower.jpg";
@@ -201,6 +201,17 @@ export default function AuthPage() {
                 >
                   Войти через Manus
                 </Button>
+
+                <div className="mt-6 pt-4 border-t border-white/10">
+                  <Button
+                    variant="ghost"
+                    className="w-full text-white/60 hover:text-white hover:bg-white/10 flex items-center justify-center gap-2"
+                    onClick={() => (window.location.href = "/staff")}
+                  >
+                    <ShieldCheck className="h-4 w-4" />
+                    Перейти на аккаунт сотрудника
+                  </Button>
+                </div>
               </TabsContent>
 
               {/* Register Tab */}
